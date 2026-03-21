@@ -351,7 +351,7 @@
 	item_state = "roguearmor"
 	armor = ARMOR_LEATHER
 	prevent_crits = ALL_EXCEPT_STAB
-	max_integrity = ARMOR_INT_CHEST_LIGHT_MASTER
+	max_integrity = INTEGRITY_STANDARD
 	sellprice = VALUE_LEATHER_ARMOR_PLUS
 
 /obj/item/clothing/armor/leather/jerkin/belted

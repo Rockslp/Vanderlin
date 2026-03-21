@@ -6,7 +6,7 @@
 	gender = PLURAL
 	icon_state = "nobleboots"
 	item_state = "nobleboots"
-	armor = list("blunt" = 20, "slash" = 20, "stab" = 20,  "piercing" = 15, "fire" = 0, "acid" = 0)
+	armor = ARMOR_LEATHER_WEAK
 	sellprice = 10
 	salvage_result = /obj/item/natural/hide/cured
 	salvage_amount = 1
@@ -29,7 +29,7 @@
 	gender = PLURAL
 	icon_state = "shortboots"
 	item_state = "shortboots"
-	armor = list("blunt" = 10, "slash" = 10, "stab" = 10,  "piercing" = 0, "fire" = 0, "acid" = 0)
+	armor = ARMOR_WEAK
 	salvage_result = /obj/item/natural/hide/cured
 	salvage_amount = 1
 
@@ -37,7 +37,7 @@
 	name = "riding boots"
 	color = "#d5c2aa"
 	desc = "Boots designed for riding a mount."
-	armor = list("blunt" = 20, "slash" = 20, "stab" = 20,  "piercing" = 10, "fire" = 0, "acid" = 0)
+	armor = ARMOR_LEATHER_WEAK
 	gender = PLURAL
 	icon_state = "ridingboots"
 	item_state = "ridingboots"
@@ -163,10 +163,10 @@
 	icon_state = "inqboots"
 	item_state = "inqboots"
 
-//Valorian Duelist Merc - On par with grenzelhoftian's stats.
+//Valorian Duelist Merc
 /obj/item/clothing/shoes/nobleboot/duelboots
 	desc = "Boots custom fit for a Valorian Duelist. Footwork is paramount in a duel, so good boots are a must."
-	armor = list("blunt" = 25, "slash" = 25, "stab" = 25,  "piercing" = 15, "fire" = 0, "acid" = 0)
+	armor = ARMOR_LEATHER_BAD
 
 /obj/item/clothing/shoes/psydonboots
 	name = "enduring boots"

@@ -344,7 +344,7 @@
 	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
 	block2add = FOV_BEHIND
 	melting_material = /datum/material/steel
-	max_integrity = ARMOR_INT_HELMET_HEAVY_STEEL - ARMOR_INT_HELMET_HEAVY_ADJUSTABLE_PENALTY
+	max_integrity = INTEGRITY_STRONG + 50
 	adjustable = CAN_CADJUST
 
 /obj/item/clothing/head/helmet/heavy/volfplate/puritan

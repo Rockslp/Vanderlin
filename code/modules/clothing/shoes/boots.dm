@@ -3,29 +3,30 @@
 	//dropshrink = 0.75
 	color = "#d5c2aa"
 	desc = "Boots made out of darker materials. Offers light protection against melee attacks."
+	armor = ARMOR_PADDED_BAD
+	max_integrity = INTEGRITY_STANDARD
 	gender = PLURAL
 	icon_state = "blackboots"
 	item_state = "blackboots"
-	armor = list("blunt" = 15, "slash" = 15, "stab" = 15,  "piercing" = 5, "fire" = 0, "acid" = 0)
 	sellprice = 10
 	salvage_result = /obj/item/natural/hide/cured
 	salvage_amount = 1
-	max_integrity = INTEGRITY_STANDARD
 
 /obj/item/clothing/shoes/boots/armor
 	name = "plated boots"
 	desc = "Armored boots made from steel offering heavy protection against both melee and ranged attacks."
-	body_parts_covered = FEET
 	icon_state = "armorboots"
 	item_state = "armorboots"
 	prevent_crits = list(BCLASS_LASHING, BCLASS_BITE, BCLASS_CUT, BCLASS_CHOP, BCLASS_BLUNT, BCLASS_TWIST)
 	color = null
 	blocksound = PLATEHIT
-	armor = list("blunt" = 100, "slash" = 100, "stab" = 100,  "piercing" = 80, "fire" = 0, "acid" = 0)
+	armor = ARMOR_PLATE
 	max_integrity = INTEGRITY_STRONGEST
 	armor_class = AC_HEAVY
 	clothing_flags = CANT_SLEEP_IN
 	anvilrepair = /datum/attribute/skill/craft/armorsmithing
+	melting_material = /datum/material/steel
+	melt_amount = 75
 	resistance_flags = FIRE_PROOF
 	pickup_sound = "rustle"
 	equip_sound = 'sound/foley/equip/equip_armor_plate.ogg'
@@ -46,6 +47,7 @@
 	armor_class = AC_MEDIUM
 	sellprice = 20
 	item_weight = 7 * IRON_MULTIPLIER
+	melting_material = /datum/material/iron
 
 /obj/item/clothing/shoes/boots/armor/ironmaille
 	name = "chainmail boots"
@@ -57,7 +59,7 @@
 	armor_class = AC_LIGHT
 	sellprice = VALUE_IRON_ARMOR
 	item_weight = 6 * IRON_MULTIPLIER
-	smeltresult = /obj/item/fertilizer/ash //we avoid melting one piece for one bar
+	smeltresult = null
 	melting_material = /datum/material/iron // we get one bar per two pieces of the item recovered and smelted
 	melt_amount = 75
 
@@ -80,10 +82,10 @@
 	icon = 'icons/roguetown/clothing/special/blkknight.dmi'
 	mob_overlay_icon = 'icons/roguetown/clothing/special/onmob/blkknight.dmi'
 	sleeved = 'icons/roguetown/clothing/special/onmob/blkknight.dmi'
-	anvilrepair = /datum/attribute/skill/craft/blacksmithing
-	smeltresult = /obj/item/ingot/blacksteel
 	armor_class = AC_MEDIUM
 	armor = ARMOR_PLATE_GOOD
+	smeltresult = /obj/item/ingot/blacksteel
+	melting_material = /datum/material/blacksteel
 	item_weight = 7 * BLACKSTEEL_MULTIPLIER
 	sellprice = VALUE_SILVER_ITEM * 2
 
@@ -95,13 +97,10 @@
 	gender = PLURAL
 	icon_state = "leatherboots"
 	item_state = "leatherboots"
-	armor = list("blunt" = 20, "slash" = 20, "stab" = 20,  "piercing" = 10, "fire" = 0, "acid" = 0)
+	armor = ARMOR_LEATHER_WEAK
 	resistance_flags = FLAMMABLE
 	sellprice = 10
-	salvage_result = /obj/item/natural/hide/cured
-	salvage_amount = 1
 	item_weight = 3
-	max_integrity = INTEGRITY_STANDARD
 	wetable = FALSE
 
 //THE ARMOUR VALUES OF ADVANCED AND MASTERWORK BOOTS ARE INTENDED
@@ -112,7 +111,7 @@
 	desc = "Sturdy, durable, flexible. A marvel of the dark ages that exists solely to protect your toes."
 	max_integrity = INTEGRITY_STANDARD + 50
 	prevent_crits = list(BCLASS_CUT, BCLASS_BLUNT, BCLASS_TWIST)
-	armor = list("blunt" = 50, "slash" = 40, "stab" = 20, "piercing" = 0, "fire" = 0, "acid" = 0)
+	armor = ARMOR_LEATHER //Fix
 
 /obj/item/clothing/shoes/boots/leather/advanced/watch
 	name = "watch boots"
@@ -130,13 +129,13 @@
 	desc = "These boots are a craftsmanship marvel. Made with the finest leather. Strong, nimble, reliable."
 	max_integrity = INTEGRITY_STANDARD + 100
 	prevent_crits = list(BCLASS_CUT, BCLASS_BLUNT, BCLASS_TWIST, BCLASS_CHOP) //we're adding chop here!
-	armor = list("blunt" = 80, "slash" = 60, "stab" = 40, "piercing" = 0,"fire" = 0, "acid" = 0)
+	armor = list("blunt" = 80, "slash" = 60, "stab" = 40, "piercing" = 0,"fire" = 0, "acid" = 0) //Fix
 
 /obj/item/clothing/shoes/boots/leather/masterwork/Initialize()
 	. = ..()
 	filters += filter(type="drop_shadow", x=0, y=0, size=0.5, offset=1, color=rgb(218, 165, 32))
 
-/obj/item/clothing/shoes/boots/furlinedboots
+/obj/item/clothing/shoes/boots/furlinedboots //Fix
 	name = "fur lined boots"
 	desc = "Leather boots lined with fur."
 	gender = PLURAL
@@ -145,7 +144,6 @@
 	sewrepair = TRUE
 	armor = list("blunt" = 30, "slash" = 10, "stab" = 20,  "piercing" = 0, "fire" = 0, "acid" = 0)
 	salvage_result = /obj/item/natural/fur
-	salvage_amount = 1
 	item_weight = 3
 	min_cold_protection_temperature = -20
 	wetable = FALSE
@@ -159,7 +157,6 @@
 	sewrepair = TRUE
 	armor = list("blunt" = 30, "slash" = 10, "stab" = 20,  "piercing" = 0, "fire" = 0, "acid" = 0)
 	is_barefoot = TRUE
-	salvage_amount = 1
 	salvage_result = /obj/item/natural/fur
 	min_cold_protection_temperature = -20
 
@@ -171,7 +168,7 @@
 	item_state = "furlinedanklets"
 	is_barefoot = TRUE
 	sewrepair = TRUE
-	armor = list("blunt" = 5, "slash" = 5, "stab" = 5,  "piercing" = 0, "fire" = 0, "acid" = 0) //Thinks its fair for a piece of cloth and fiber.
+	armor = ARMOR_MINIMAL
 	salvage_result = /obj/item/natural/cloth
 	salvage_amount = 1
 	item_weight = 2

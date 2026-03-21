@@ -363,7 +363,7 @@
 	color = "#8b1414"
 	detail_color = "#99b2b1"
 	armor = ARMOR_PLATE
-	max_integrity = ARMOR_INT_SIDE_STEEL
+	max_integrity = INTEGRITY_STRONG
 	body_parts_covered = NECK
 	resistance_flags = FIRE_PROOF
 	slot_flags = ITEM_SLOT_NECK

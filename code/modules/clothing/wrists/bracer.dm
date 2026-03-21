@@ -12,7 +12,9 @@
 	resistance_flags = FIRE_PROOF
 	anvilrepair = /datum/attribute/skill/craft/armorsmithing
 	sewrepair = FALSE
-	smeltresult = /obj/item/ingot/iron //no 1 to 1 conversion
+	smeltresult = /obj/item/ingot/steel
+	melting_material = /datum/material/steel
+	melt_amount = 75
 	max_integrity = INTEGRITY_STRONG
 
 /obj/item/clothing/wrists/bracers/naledi
@@ -26,18 +28,20 @@
 	armor = ARMOR_PADDED_GOOD
 	blade_dulling = DULLING_BASHCHOP
 	color = "#48443B"
-	max_integrity = ARMOR_INT_SIDE_STEEL //Heavy leather-tier protection and critical resistances, steel-tier integrity. Integrity boost encourages hand-to-hand parrying. Weaker than the Psydonic Thorns.
+	max_integrity = INTEGRITY_STRONG
 	prevent_crits = list(BCLASS_CUT, BCLASS_CHOP, BCLASS_STAB, BCLASS_BLUNT, BCLASS_TWIST)
 	blocksound = SOFTHIT
 	sewrepair = TRUE
+	smeltresult = /obj/item/fertilizer/ash
+	melting_material = null
 
 /obj/item/clothing/wrists/bracers/iron
 	name = "iron plate vambraces"
 	desc = "Plate forearm guards that offer good protection while allowing mobility."
 	icon_state = "ibracers"
 	item_state = "ibracers"
-	armor = ARMOR_MAILLE
-	max_integrity = INTEGRITY_STRONG
+	armor = ARMOR_PLATE_BAD
+	max_integrity = INTEGRITY_STANDARD
 
 
 /obj/item/clothing/wrists/bracers/jackchain
@@ -49,7 +53,7 @@
 	armor = ARMOR_MAILLE
 	max_integrity = INTEGRITY_STRONGEST
 	prevent_crits = CUT_AND_MINOR_CRITS
-	smeltresult = /obj/item/fertilizer/ash
+	smeltresult = null
 	melting_material = /datum/material/steel
 	melt_amount = 75
 
@@ -61,9 +65,8 @@
 
 	armor_class = AC_MEDIUM
 	armor = ARMOR_MAILLE
-	max_integrity = INTEGRITY_STRONG
 	prevent_crits = CUT_AND_MINOR_CRITS
-	smeltresult = /obj/item/fertilizer/ash //we avoid melting one piece for one bar
+	smeltresult = null
 	melting_material = /datum/material/iron // we get one bar per two pieces of the item recovered and smelted
 	melt_amount = 75
 
@@ -73,11 +76,12 @@
 	icon_state = "lbracers"
 	item_state = "lbracers"
 	armor_class = AC_LIGHT
-	armor = list("blunt" = 30, "slash" = 30, "stab" = 30,  "piercing" = 15, "fire" = 0, "acid" = 0)
+	armor = ARMOR_LEATHER_BAD
 	prevent_crits = list(BCLASS_LASHING, BCLASS_BITE, BCLASS_CUT)
 	resistance_flags = null
 	blocksound = SOFTHIT
 	smeltresult = /obj/item/fertilizer/ash
+	melting_material = null
 	blade_dulling = DULLING_BASHCHOP
 	break_sound = 'sound/foley/cloth_rip.ogg'
 	drop_sound = 'sound/foley/dropsound/cloth_drop.ogg'
@@ -93,14 +97,14 @@
 /obj/item/clothing/wrists/bracers/leather/advanced
 	name = "hardened leather bracers"
 	desc = "Hardened leather braces that will keep your wrists safe from bludgeoning."
-	armor = list("blunt" = 60, "slash" = 40, "stab" = 20, "piercing" = 0, "fire" = 0, "acid" = 0)
+	armor = list("blunt" = 60, "slash" = 40, "stab" = 20, "piercing" = 0, "fire" = 0, "acid" = 0) //Fix
 	prevent_crits = list(BCLASS_CUT, BCLASS_BLUNT, BCLASS_TWIST) //We're losing stab here
 	max_integrity = INTEGRITY_STANDARD + 50
 
 /obj/item/clothing/wrists/bracers/leather/masterwork
 	name = "masterwork leather bracers"
 	desc = "These bracers are a craftsmanship marvel. Made with the finest leather. Strong, nimble, reliable."
-	armor = list("blunt" = 80, "slash" = 60, "stab" = 40, "piercing" = 0, "fire" = 0, "acid" = 0)
+	armor = list("blunt" = 80, "slash" = 60, "stab" = 40, "piercing" = 0, "fire" = 0, "acid" = 0) //Fix
 	prevent_crits = list(BCLASS_CUT, BCLASS_CHOP, BCLASS_BLUNT, BCLASS_TWIST) //We're getting chop here
 	max_integrity = INTEGRITY_STANDARD + 100
 
@@ -130,12 +134,11 @@
 	armor_class = AC_MEDIUM
 	armor = list("blunt" = 80, "slash" = 100, "stab" = 90, "piercing" = 80, "fire" = 0, "acid" = 0)
 	prevent_crits = list(BCLASS_CUT, BCLASS_STAB, BCLASS_CHOP, BCLASS_BLUNT, BCLASS_SMASH, BCLASS_TWIST, BCLASS_PICK)
-	blocksound = PLATEHIT
-	resistance_flags = FIRE_PROOF
 	max_integrity = 400
-	anvilrepair = /datum/attribute/skill/craft/armorsmithing
-	sewrepair = FALSE
 	alternate_worn_layer = WRISTS_LAYER
+	smeltresult = /obj/item/ingot/steel
+	melting_material = /datum/material/blacksteel
+	melt_amount = 50
 
 /obj/item/clothing/wrists/bracers/psythorns/equipped(mob/user, slot)
 	. = ..()

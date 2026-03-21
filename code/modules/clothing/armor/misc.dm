@@ -141,7 +141,7 @@
 	blocksound = SOFTHIT
 	body_parts_covered = COVERAGE_TORSO
 	armor = ARMOR_LEATHER_STUDDED
-	max_integrity = ARMOR_INT_CHEST_PLATE_BRIGANDINE
+	max_integrity = INTEGRITY_STRONG + 50
 	smeltresult = /obj/item/ingot/iron
 	equip_delay_self = 40
 	armor_class = AC_LIGHT//steel version of the studded leather armor now

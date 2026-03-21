@@ -120,7 +120,7 @@
 	icon_state = "naledimask"
 	desc = "Runes and wards, meant for daemons; the gold has somehow rusted in unnatural, impossible agony. The most prominent of these etchings is in the shape of the psycross. Armored to protect the wearer's face."
 	max_integrity = 100
-	armor = ARMOR_MASK_METAL
+	armor = list("blunt" = 50, "slash" = 50, "stab" = 50, "piercing" = 50, "fire" = 0, "acid" = 0)
 	flags_inv = HIDEFACE
 	prevent_crits = list(BCLASS_CUT, BCLASS_STAB, BCLASS_CHOP, BCLASS_BLUNT)
 	sellprice = 0
@@ -148,7 +148,7 @@
 	icon_state = "naledimask"
 	desc = "A golden mask, hiding the face of those who prefer their fists and agility to speak for them."
 	max_integrity = 150
-	armor = ARMOR_MASK_METAL
+	armor = list("blunt" = 50, "slash" = 50, "stab" = 50, "piercing" = 50, "fire" = 0, "acid" = 0)
 	flags_inv = HIDEFACE
 	prevent_crits = list(BCLASS_CUT, BCLASS_STAB, BCLASS_CHOP, BCLASS_BLUNT)
 	sellprice = 0

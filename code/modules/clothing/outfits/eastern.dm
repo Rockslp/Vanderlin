@@ -47,7 +47,7 @@
 	icon_state = "spellcasterhat"
 	item_state = "spellcasterhat"
 	armor = ARMOR_LEATHER_GOOD
-	max_integrity = ARMOR_INT_HELMET_LEATHER
+	max_integrity = INTEGRITY_STANDARD
 	blocksound = SOFTHIT
 	sewrepair = TRUE
 	flags_inv = HIDEEARS
@@ -102,7 +102,7 @@
 	icon_state = "eastsuit2"
 	item_state = "eastsuit2"
 	armor = ARMOR_LEATHER_GOOD // Makes it the equivalence of studded with less integrity and better armor
-	max_integrity = ARMOR_INT_CHEST_LIGHT_MEDIUM
+	max_integrity = INTEGRITY_STANDARD + 50
 
 //craftable variation of eastsuit, essentially requiring the presence of a tailor with relevant materials
 //still weak against blunt
@@ -114,7 +114,7 @@
 	item_state = "eastsuit1"
 	sleeved = 'icons/roguetown/clothing/onmob/helpers/sleeves_armor.dmi'
 	armor = ARMOR_LEATHER_GOOD
-	max_integrity = ARMOR_INT_CHEST_LIGHT_MEDIUM
+	max_integrity = INTEGRITY_STANDARD + 50
 
 
 /obj/item/clothing/armor/basiceast/captainrobe
@@ -123,7 +123,7 @@
 	icon_state = "eastsuit4"
 	item_state = "eastsuit4"
 	armor = ARMOR_LEATHER_GOOD
-	max_integrity = ARMOR_INT_CHEST_LIGHT_MASTER + 25 // Head Honcho gets a buff
+	max_integrity = INTEGRITY_STRONG + 25
 	sellprice = 25
 
 
@@ -144,7 +144,7 @@
 	item_state = "anklets"
 	is_barefoot = TRUE
 	sewrepair = TRUE
-	armor = ARMOR_BOOTS_BAD
+	armor = list("blunt" = 30, "slash" = 10, "stab" = 20, "piercing" = 0, "fire" = 0, "acid" = 0)
 
 /obj/item/clothing/shoes/rumaclan
 	name = "raised sandals"
@@ -152,14 +152,14 @@
 	icon_state = "eastsandals"
 	item_state = "eastsandals"
 	sleeved = 'icons/roguetown/clothing/onmob/helpers/stonekeep_merc.dmi'
-	armor = ARMOR_BOOTS
+	armor = list("blunt" = 30, "slash" = 40, "stab" = 60, "piercing" = 0, "fire" = 0, "acid" = 0)
 
 /obj/item/clothing/gloves/eastgloves1
 	name = "black gloves"
 	desc = "Sleek gloves typically used by swordsmen."
 	icon_state = "eastgloves1"
 	item_state = "eastgloves1"
-	armor = ARMOR_GLOVES_LEATHER
+	armor = ARMOR_LEATHER_BAD
 	prevent_crits = list(BCLASS_CUT, BCLASS_BLUNT)
 	resistance_flags = null
 	blocksound = SOFTHIT
@@ -174,7 +174,7 @@
 	desc = "Unusual gloves worn by foreign gangs."
 	icon_state = "eastgloves2"
 	item_state = "eastgloves2"
-	armor = ARMOR_GLOVES_LEATHER
+	armor = ARMOR_LEATHER_BAD
 	prevent_crits = list(BCLASS_CUT, BCLASS_BLUNT)
 	resistance_flags = null
 	blocksound = SOFTHIT
@@ -190,7 +190,7 @@
 	icon_state = "easthat"
 	item_state = "easthat"
 	armor = ARMOR_PADDED_GOOD
-	max_integrity = ARMOR_INT_HELMET_LEATHER
+	max_integrity = INTEGRITY_STANDARD
 	blocksound = SOFTHIT
 	sewrepair = TRUE
 	flags_inv = HIDEEARS

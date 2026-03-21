@@ -12,7 +12,7 @@
 		/mob/living/simple_animal/hostile/retaliate/saiga
 	)
 	armor = ARMOR_PADDED_GOOD
-	max_integrity = ARMOR_INT_CHEST_LIGHT_MASTER
+	max_integrity = INTEGRITY_STRONG
 	break_sound = 'sound/foley/cloth_rip.ogg'
 	drop_sound = 'sound/foley/dropsound/cloth_drop.ogg'
 	sewrepair = TRUE
@@ -64,7 +64,6 @@
 	barding_state = "barding_chain"
 	female_barding_state = "barding_chain-f"
 	armor = ARMOR_MAILLE
-	max_integrity = ARMOR_INT_CHEST_MEDIUM_STEEL
 	drop_sound = 'sound/foley/dropsound/chain_drop.ogg'
 	pickup_sound = 'sound/foley/equip/equip_armor_chain.ogg'
 	anvilrepair = /datum/attribute/skill/craft/armorsmithing
@@ -92,7 +91,6 @@
 	barding_state = "barding_chain"
 	female_barding_state = "barding_chain"
 	armor = ARMOR_MAILLE
-	max_integrity = ARMOR_INT_CHEST_MEDIUM_STEEL
 	drop_sound = 'sound/foley/dropsound/chain_drop.ogg'
 	pickup_sound = 'sound/foley/equip/equip_armor_chain.ogg'
 	anvilrepair = /datum/attribute/skill/craft/armorsmithing

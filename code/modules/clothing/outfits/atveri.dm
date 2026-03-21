@@ -13,7 +13,7 @@
 	item_state = "atgervi_shaman_coat"
 	armor = ARMOR_LEATHER_GOOD
 	prevent_crits = ALL_EXCEPT_STAB
-	max_integrity = ARMOR_INT_CHEST_LIGHT_MASTER
+	max_integrity = INTEGRITY_STANDARD
 
 /obj/item/clothing/pants/trou/leather/atgervi
 	name = "fur pants"

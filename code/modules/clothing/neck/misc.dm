@@ -317,14 +317,12 @@
 	desc = "A piece of steel plate armor meant to protect the throat and neck of its wearer against decapitation, extending the protection of armor plates."
 	icon_state = "bevor"
 	flags_inv = HIDEFACIALHAIR
-	melt_amount = 75
-	melting_material = /datum/material/steel
 	melt_amount = 100
 	melting_material = /datum/material/steel
+	smeltresult = /obj/item/ingot/steel
 	equip_sound = 'sound/foley/equip/equip_armor.ogg'
 	drop_sound = 'sound/foley/dropsound/armor_drop.ogg'
 	break_sound = 'sound/foley/breaksound.ogg'
-	slot_flags = ITEM_SLOT_NECK
 	blocksound = PLATEHIT
 	clothing_flags = CANT_SLEEP_IN
 
@@ -357,18 +355,15 @@
 			Fits comfortably beneath chest armor, despite its weight."
 	flags_inv = HIDEFACIALHAIR
 	resistance_flags = FIRE_PROOF
-	slot_flags = ITEM_SLOT_NECK
 	blocksound = PLATEHIT
 	equip_sound = 'sound/foley/equip/equip_armor.ogg'
 	drop_sound = 'sound/foley/dropsound/armor_drop.ogg'
 	break_sound = 'sound/foley/breaksound.ogg'
-	smeltresult = /obj/item/ingot/iron
 	melting_material = /datum/material/iron
 	clothing_flags = CANT_SLEEP_IN
 
 	armor_class = AC_HEAVY
 	armor = ARMOR_PLATE_BAD
-	body_parts_covered = NECK
 	max_integrity = INTEGRITY_STRONG
 	prevent_crits = ALL_EXCEPT_STAB
 
@@ -515,7 +510,6 @@
 	icon = 'icons/roguetown/clothing/special/coif.dmi'
 	mob_overlay_icon = 'icons/roguetown/clothing/special/onmob/coif.dmi'
 	body_parts_covered = NECK|MOUTH|EARS
-	slot_flags = ITEM_SLOT_NECK
 	flags_inv = HIDEFACE|HIDEFACIALHAIR
 	armor = ARMOR_MAILLE_GOOD
 	resistance_flags = FIRE_PROOF
@@ -588,7 +582,6 @@
 	icon_state = "talkstone"
 	item_state = "talkstone"
 	//dropshrink = 0.75
-	resistance_flags = FIRE_PROOF
 	sellprice = 98
 
 /obj/item/clothing/neck/mercator
@@ -596,7 +589,6 @@
 	desc = "An enchanted amulet commissioned by the Mercator Guild to quickly determine the commercial value of bulk goods."
 	icon_state = "horus"
 	//dropshrink = 0.75
-	resistance_flags = FIRE_PROOF
 	sellprice = 30
 
 /obj/item/clothing/neck/mercator/examine()
@@ -622,7 +614,6 @@
 	desc = ""
 	icon_state = "shalal"
 	//dropshrink = 0.75
-	resistance_flags = FIRE_PROOF
 	sellprice = 15
 
 /obj/item/clothing/neck/shalal/emir

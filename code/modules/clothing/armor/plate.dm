@@ -163,7 +163,7 @@
 	equip_delay_self = 6 SECONDS
 	unequip_delay_self = 6 SECONDS
 
-	max_integrity = ARMOR_INT_CHEST_PLATE_STEEL
+	max_integrity = INTEGRITY_STRONGEST
 	body_parts_covered = COVERAGE_FULL // Less durability than proper plate, more expensive to manufacture, and accurate to the sprite.
 
 /obj/item/clothing/armor/plate/fluted/ornate
