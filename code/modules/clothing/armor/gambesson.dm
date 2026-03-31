@@ -65,9 +65,6 @@
 	max_integrity = INTEGRITY_STRONG
 	r_sleeve_status = SLEEVE_NORMAL
 	l_sleeve_status = SLEEVE_NORMAL
-	sewrepair = TRUE
-
-	armor = ARMOR_PADDED_GOOD
 
 /obj/item/clothing/armor/gambeson/apothecary
 	name = "apothecary overcoat"
@@ -83,7 +80,6 @@
 	sleeved = 'icons/roguetown/clothing/special/onmob/steward.dmi'
 	icon_state = "stewardtailcoat"
 	item_state = "stewardtailcoat"
-	armor = ARMOR_PADDED
 	icon = 'icons/roguetown/clothing/special/steward.dmi'
 	mob_overlay_icon = 'icons/roguetown/clothing/special/onmob/steward.dmi'
 
@@ -113,8 +109,6 @@
 	l_sleeve_status = SLEEVE_NORMAL
 	sellprice = VALUE_PADDED_DRESS
 
-	body_parts_covered = COVERAGE_FULL
-
 /obj/item/clothing/armor/gambeson/heavy/dress/alt
 	icon_state = "armordressalt"
 
@@ -124,7 +118,6 @@
 	icon = 'icons/roguetown/clothing/shirts_royalty.dmi'
 	mob_overlay_icon = 'icons/roguetown/clothing/onmob/shirts_royalty.dmi'
 	desc = "A thick, padded, and comfortable dress to maintain both temperature and safety when leaving the keep."
-	body_parts_covered = COVERAGE_FULL
 	icon_state = "winterdress"
 	sleeved = 'icons/roguetown/clothing/onmob/helpers/sleeves_shirts_royalty.dmi'
 	boobed = TRUE
@@ -132,7 +125,6 @@
 	detail_color = CLOTHING_SOOT_BLACK
 	r_sleeve_status = SLEEVE_NORMAL
 	l_sleeve_status = SLEEVE_NORMAL
-	slot_flags = ITEM_SLOT_ARMOR|ITEM_SLOT_SHIRT
 	uses_lord_coloring = LORD_PRIMARY
 
 //................ Arming Jacket ............... //

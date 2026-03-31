@@ -21,13 +21,13 @@
 	body_parts_covered = COVERAGE_ALL_BUT_ARMS
 	prevent_crits = ALL_CRITICAL_HITS
 	max_integrity = INTEGRITY_STRONG
-	item_weight = 7
 
 /obj/item/clothing/armor/medium/scale/steppe
 	name = "steel heavy lamellar"
 	desc = "A chestpiece composed of easily-replaced small rectangular plates of layered steel laced together in rows with wire. Malleable and protective, perfect for cavalrymen."
 	icon_state = "hudesutu"
 	body_parts_covered = COVERAGE_FULL
+	item_weight = 8
 
 //................ Armored Surcoat ............... //	- splint mail looking armor thats colored
 /obj/item/clothing/armor/medium/surcoat
@@ -37,7 +37,6 @@
 	item_state = "surcoat"
 	detail_tag = "_metal"		// metal bits are the details so keep them uncolorer = white
 	detail_color = COLOR_WHITE
-	item_weight = 7.4
 
 /obj/item/clothing/armor/medium/surcoat/Initialize()
 	. = ..()
@@ -58,26 +57,19 @@
 	desc = "A lordly protection in Heartfelt colors. Masterfully crafted coat of plates, for important nobility."
 	color = CLOTHING_BLOOD_RED
 	sellprice = VALUE_SNOWFLAKE_STEEL+BONUS_VALUE_SMALL
-
 	body_parts_covered = COVERAGE_FULL
+	item_weight = 8
 
 /obj/item/clothing/armor/medium/scale/inqcoat
-	slot_flags = ITEM_SLOT_ARMOR
 	name = "inquisitorial duster"
 	desc = "Metal plates reinforce this heavy coat. Its striking silhouette is of ill omen to any mainland community - whether pious, or profane."
-	body_parts_covered = CHEST|VITALS|GROIN|LEGS|ARMS
-	allowed_sex = list(MALE, FEMALE)
+	body_parts_covered = COVERAGE_FULL
 	icon = 'icons/roguetown/clothing/armor.dmi'
 	mob_overlay_icon = 'icons/roguetown/clothing/onmob/armor.dmi'
 	sleeved = 'icons/roguetown/clothing/onmob/helpers/sleeves_armor_inqui.dmi'
 	icon_state = "inqcoat"
 	item_state = "inqcoat"
 	sleevetype = "shirt"
-	max_integrity = INTEGRITY_STRONG
-	anvilrepair = /datum/attribute/skill/craft/armorsmithing
-	melt_amount = 75
-	melting_material = /datum/material/steel
-	equip_delay_self = 4 SECONDS
 	blocksound = SOFTHIT
 
 /obj/item/clothing/armor/medium/scale/inqcoat/Initialize()
@@ -100,17 +92,16 @@
 			user.visible_message(span_warning("[user] stops fitting [W] inside the [src]."))
 		return
 
-/obj/item/clothing/armor/medium/scale/inqcoat/armored
-	slot_flags = ITEM_SLOT_ARMOR
+/obj/item/clothing/armor/medium/scale/inqcoat/armored //This is just half plate put into the coat, fix this
 	name = "armored inquisitorial duster"
 	desc = "Metal plates reinforce this heavy coat, worn over the top of the finest Psydonian plate."
-	smeltresult = /obj/item/ingot/steel
 	icon_state = "inqcoata"
 	item_state = "inqcoata"
-	equip_delay_self = 4 SECONDS
-	max_integrity = 300
+	max_integrity = 500
 	armor_class = AC_MEDIUM
-	armor = list("blunt" = 40, "slash" = 100, "stab" = 80, "piercing" = 40, "fire" = 0, "acid" = 0)
+	armor = ARMOR_PLATE
 	melt_amount = 150
 	melting_material =  /datum/material/steel
+	smeltresult = /obj/item/ingot/steel
 	blocksound = PLATEHIT
+	item_weight = 10

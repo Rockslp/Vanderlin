@@ -140,7 +140,7 @@
 	icon_state = "light_brigandine"
 	blocksound = SOFTHIT
 	body_parts_covered = COVERAGE_TORSO
-	armor = ARMOR_LEATHER_STUDDED
+	armor = ARMOR_BRIGANDINE
 	max_integrity = INTEGRITY_STRONG + 50
 	smeltresult = /obj/item/ingot/iron
 	equip_delay_self = 40

@@ -24,7 +24,6 @@
 
 	armor = ARMOR_PADDED_BAD
 	prevent_crits = MINOR_CRITICALS
-	armor = ARMOR_LEATHER_GOOD
 	max_integrity = INTEGRITY_WORST
 
 /obj/item/clothing/neck/keffiyeh/AdjustClothes(mob/user)

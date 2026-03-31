@@ -77,12 +77,11 @@
 
 /obj/item/clothing/shoes/boots/armor/blkknight
 	name = "blacksteel boots"
-	desc = "Boots forged from blacksteel, light yet strong, perfect for a fearless stride."
+	desc = "Boots forged from blacksteel, durable and strong, perfect for a fearless stride."
 	icon_state = "bkboots"
 	icon = 'icons/roguetown/clothing/special/blkknight.dmi'
 	mob_overlay_icon = 'icons/roguetown/clothing/special/onmob/blkknight.dmi'
 	sleeved = 'icons/roguetown/clothing/special/onmob/blkknight.dmi'
-	armor_class = AC_MEDIUM
 	armor = ARMOR_PLATE_GOOD
 	smeltresult = /obj/item/ingot/blacksteel
 	melting_material = /datum/material/blacksteel

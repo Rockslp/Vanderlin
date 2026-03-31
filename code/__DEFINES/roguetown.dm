@@ -292,7 +292,7 @@ Thing can move up or down an armor class by significant changes to coverage & cr
 #define ARMOR_LEATHER_BAD	list("blunt" = 30, "slash" = 30, "stab" = 30, "piercing" = 10, "fire" = 0, "acid" = 0)
 #define ARMOR_LEATHER		list("blunt" = 35, "slash" = 35, "stab" = 35, "piercing" = 15, "fire" = 0, "acid" = 0)
 #define	ARMOR_LEATHER_GOOD	list("blunt" = 40, "slash" = 40, "stab" = 40, "piercing" = 20, "fire" = 0, "acid" = 0)
-#define ARMOR_LEATHER_APEX	list("blunt" = 40, "slash" = 40, "stab" = 40, "piercing" = 20, "fire" = 0, "acid" = 0)
+#define ARMOR_LEATHER_APEX	list("blunt" = 80, "slash" = 70, "stab" = 50, "piercing" = 30, "fire" = 0, "acid" = 0)
 
 // Medium AC
 #define ARMOR_MAILLE_IRON	list("blunt" = 30, "slash" = 45, "stab" = 50, "piercing" = 30, "fire" = 0, "acid" = 0)

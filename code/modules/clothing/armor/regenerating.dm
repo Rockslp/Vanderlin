@@ -68,7 +68,7 @@
 	flags_inv = null //Exposes the chest and-or breasts.
 	r_sleeve_status = SLEEVE_NORMAL
 	l_sleeve_status = SLEEVE_NORMAL
-	armor_class = AC_LIGHT
+	armor_class = null
 	blocksound = SOFTUNDERHIT
 	blade_dulling = DULLING_BASHCHOP
 	armor = ARMOR_PADDED

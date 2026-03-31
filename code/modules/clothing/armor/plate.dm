@@ -17,6 +17,7 @@
 	body_parts_covered = COVERAGE_ALL_BUT_LEGS //Has shoulder guards, and nothing else to suggest leg protection
 	prevent_crits = ALL_EXCEPT_BLUNT
 	max_integrity = INTEGRITY_STRONGEST
+	item_weight = 7
 	stand_speed_reduction = 1.2
 
 /obj/item/clothing/armor/plate/Initialize()
@@ -43,7 +44,6 @@
 	unequip_delay_self = 7 SECONDS
 	sellprice = VALUE_FULL_PLATE
 
-	armor = ARMOR_PLATE
 	body_parts_covered = COVERAGE_FULL
 	item_weight = 12 * STEEL_MULTIPLIER
 
@@ -79,14 +79,13 @@
 	name = "blacksteel plate"
 	desc = "A chestplate forged from blacksteel with shoulder guards, combining strength and agility."
 	body_parts_covered = COVERAGE_ALL_BUT_LEGS
-	armor_class = AC_MEDIUM
 	icon_state = "bkarmor"
 	icon = 'icons/roguetown/clothing/special/blkknight.dmi'
 	mob_overlay_icon = 'icons/roguetown/clothing/special/onmob/blkknight.dmi'
 	sleeved = 'icons/roguetown/clothing/special/onmob/blkknight.dmi'
 	anvilrepair = /datum/attribute/skill/craft/blacksmithing
 	smeltresult = /obj/item/ingot/blacksteel
-	item_weight = 12 * BLACKSTEEL_MULTIPLIER
+	item_weight = 6 * BLACKSTEEL_MULTIPLIER
 	sellprice = VALUE_SILVER_ITEM * 6
 	stand_speed_reduction = 1.05
 
@@ -155,7 +154,7 @@
 	. = ..()
 	enchant(/datum/enchantment/silver)
 
-/obj/item/clothing/armor/plate/fluted
+/obj/item/clothing/armor/plate/fluted //Fix
 	name = "fluted half-plate"
 	desc = "An ornate steel cuirass, fitted with tassets and pauldrons for additional coverage. This lightweight deviation of 'plate armor' is favored by cuirassiers all across Psydonia, alongside fledging barons who've - up until now - waged their fiercest battles upon a chamberpot."
 	icon_state = "ornatehalfplate"
@@ -163,42 +162,19 @@
 	equip_delay_self = 6 SECONDS
 	unequip_delay_self = 6 SECONDS
 
-	max_integrity = INTEGRITY_STRONGEST
-	body_parts_covered = COVERAGE_FULL // Less durability than proper plate, more expensive to manufacture, and accurate to the sprite.
+	body_parts_covered = COVERAGE_FULL
 
-/obj/item/clothing/armor/plate/fluted/ornate
+/obj/item/clothing/armor/plate/fluted/ornate //Fix
 	name = "psydonian half-plate"
 	desc = "A sturdily made fluted half-plate armour-set, complete with pauldrons and shoulder-guards. \
 			Favored by both the Oratorium Throni Vacui and the Order of the Silver Psycross. It smells of the madness of an enduring God."
 	icon_state = "ornatehalfplate"
 
-	max_integrity = 400
 	melt_amount = 150
 	melting_material = /datum/material/silver
-	armor = ARMOR_PLATE // overall worse because of the endurance buff //Changed to Plate armor
 
 
 /obj/item/clothing/armor/plate/fluted/ornate/ordinator
 	name = "inquisitorial ordinator's plate"
 	desc = "A relic that is said to have survived the early sieges of Grenzelhoft, refurbished and repurposed to slay the arch-enemy in the name of Psydon. <br> A fluted cuirass that has been reinforced with thick padding and an additional shoulder piece. You will endure."
 	icon_state = "ordinatorplate"
-
-
-/datum/status_effect/buff/psydonic_endurance
-	id = "psydonic_endurance"
-	alert_type = /atom/movable/screen/alert/status_effect/buff/psydonic_endurance
-	effectedstats = list(STAT_CONSTITUTION = 1,STAT_ENDURANCE = 1)
-
-/datum/status_effect/buff/psydonic_endurance/on_apply()
-	. = ..()
-	if(HAS_TRAIT(owner, TRAIT_MEDIUMARMOR) && !HAS_TRAIT(owner, TRAIT_HEAVYARMOR))
-		ADD_TRAIT(owner, TRAIT_HEAVYARMOR, src)
-
-/datum/status_effect/buff/psydonic_endurance/on_remove()
-	. = ..()
-	REMOVE_TRAIT(owner, TRAIT_HEAVYARMOR, src)
-
-/atom/movable/screen/alert/status_effect/buff/psydonic_endurance
-	name = "Psydonic Endurance"
-	desc = "I am protected by blessed Psydonian plate armor."
-	icon_state = "buff"

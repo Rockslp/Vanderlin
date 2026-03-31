@@ -30,7 +30,7 @@
 	name = "hardened leather armor"
 	desc = "Sturdy, durable, flexible. Will keep you alive."
 	max_integrity = INTEGRITY_STANDARD + 50
-	body_parts_covered = CHEST|GROIN|VITALS|LEGS|ARMS
+	body_parts_covered = COVERAGE_FULL
 	prevent_crits = list(BCLASS_CUT, BCLASS_BLUNT, BCLASS_TWIST)
 	armor = list("blunt" = 75, "slash" = 60, "stab" = 30, "piercing" = 10, "fire" = 0, "acid" = 0)
 
@@ -38,6 +38,7 @@
 	name = "masterwork leather armor"
 	desc = "This leather armor is a craftsmanship marvel. Made with the finest leather. Strong, nimble, reliable."
 	max_integrity = INTEGRITY_STANDARD + 100
+	body_parts_covered = COVERAGE_FULL
 	prevent_crits = list(BCLASS_CUT, BCLASS_BLUNT, BCLASS_TWIST, BCLASS_CHOP) //we're adding chop here!
 	armor = list("blunt" = 100, "slash" = 70, "stab" = 40, "piercing" = 10, "fire" = 0, "acid" = 0)
 
@@ -87,11 +88,9 @@
 	color = CLOTHING_BARK_BROWN
 	blade_dulling = DULLING_BASHCHOP
 	blocksound = SOFTHIT
-	sewrepair = TRUE
 	sleevetype = null
 	sleeved = null
 
-	armor = ARMOR_LEATHER_BAD
 	body_parts_covered = COVERAGE_VEST
 	prevent_crits = CUT_AND_MINOR_CRITS
 	salvage_result = /obj/item/natural/hide/cured
@@ -169,7 +168,6 @@
 	mob_overlay_icon = 'icons/roguetown/clothing/special/onmob/gatemaster.dmi'
 	icon_state = "master_coat"
 	blocksound = SOFTHIT
-	slot_flags = ITEM_SLOT_ARMOR
 	armor = ARMOR_MAILLE_IRON
 	body_parts_covered = COVERAGE_ALL_BUT_LEGS
 	salvage_result = /obj/item/natural/cloth
@@ -183,7 +181,6 @@
 
 //................ Sea Jacket ............... //
 /obj/item/clothing/armor/leather/jacket/sea
-	slot_flags = ITEM_SLOT_ARMOR
 	name = "sea jacket"
 	desc = "A sturdy jacket worn by daring seafarers. The leather it's made from has been tanned by the salt of Abyssor's seas."
 	icon_state = "sailorvest"
@@ -214,8 +211,6 @@
 	desc = "Displaying wealth while keeping your guts safe from blades with thick leather pads underneath."
 	sellprice = VALUE_LEATHER_ARMOR_LORD
 
-	body_parts_covered = COVERAGE_SHIRT
-
 //................ Silk Jacket ............... //
 
 /obj/item/clothing/armor/leather/jacket/tailcoat
@@ -226,7 +221,6 @@
 	detail_tag = "_detail"
 	sleeved = 'icons/roguetown/clothing/onmob/helpers/sleeves_maids.dmi'
 	detail_color = CLOTHING_DARK_INK
-	slot_flags = ITEM_SLOT_ARMOR
 	armor = ARMOR_PADDED
 	allowed_ages = ALL_AGES_LIST
 
@@ -251,7 +245,6 @@
 	sleeved = 'icons/roguetown/clothing/special/onmob/hand.dmi'
 	detail_tag = "_detail"
 	detail_color = CLOTHING_BERRY_BLUE
-	body_parts_covered = COVERAGE_SHIRT
 	uses_lord_coloring = LORD_PRIMARY
 
 /obj/item/clothing/armor/leather/jacket/courtphysician
@@ -276,9 +269,6 @@
 	sleeved = 'icons/roguetown/clothing/onmob/helpers/sleeves_courtphys.dmi'
 	mob_overlay_icon = 'icons/roguetown/clothing/onmob/courtphys.dmi'
 	detail_tag = "_detail"
-	boobed = FALSE
-	uses_lord_coloring = LORD_PRIMARY
-	alternate_worn_layer = 19
 
 /obj/item/clothing/armor/leather/jacket/leathercoat
 	name = "leather coat"
@@ -300,7 +290,6 @@
 	mob_overlay_icon = 'icons/roguetown/clothing/onmob/armor.dmi'
 	body_parts_covered = COVERAGE_FULL
 	sleeved = 'icons/roguetown/clothing/onmob/helpers/sleeves_armor.dmi'
-	armor = ARMOR_LEATHER
 	prevent_crits = list(BCLASS_CUT, BCLASS_STAB, BCLASS_BLUNT, BCLASS_CHOP, BCLASS_SMASH)
 	max_integrity = 250
 
@@ -311,17 +300,12 @@
 	icon = 'icons/roguetown/clothing/leathercoat.dmi'
 	mob_overlay_icon = 'icons/roguetown/clothing/onmob/leathercoat.dmi'
 	sleeved = 'icons/roguetown/clothing/onmob/leathercoat.dmi'
-	boobed = TRUE
-	armor = ARMOR_LEATHER
-	body_parts_covered = COVERAGE_ALL_BUT_LEGS
 
 /obj/item/clothing/armor/leather/jacket/leathercoat/duelcoat
 	name = "black leather coat"
 	desc = "A stylish coat worn by the Duelists of Valoria. Light and flexible, it doesn't impede the complex movements they are known for, Seems to be well-padded."
 	icon_state = "bwleathercoat"
-	boobed = TRUE
 	armor = ARMOR_LEATHER_GOOD
-	body_parts_covered = COVERAGE_ALL_BUT_LEGS
 	prevent_crits = list(BCLASS_CUT, BCLASS_TWIST, BCLASS_STAB)
 
 /obj/item/clothing/armor/leather/jacket/leathercoat/renegade
@@ -351,7 +335,6 @@
 	item_state = "roguearmor"
 	armor = ARMOR_LEATHER
 	prevent_crits = ALL_EXCEPT_STAB
-	max_integrity = INTEGRITY_STANDARD
 	sellprice = VALUE_LEATHER_ARMOR_PLUS
 
 /obj/item/clothing/armor/leather/jerkin/belted
