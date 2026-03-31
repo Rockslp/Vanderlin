@@ -10,7 +10,7 @@
 	prevent_crits = list(BCLASS_LASHING, BCLASS_BITE, BCLASS_CUT, BCLASS_CHOP, BCLASS_BLUNT, BCLASS_TWIST)
 	blocksound = PLATEHIT
 	resistance_flags = FIRE_PROOF
-	anvilrepair = /datum/attribute/skill/craft/armorsmithing
+	anvilrepair = /datum/attribute/skill/craft/armor_repair
 	sewrepair = FALSE
 	smeltresult = /obj/item/ingot/steel
 	melting_material = /datum/material/steel
@@ -31,9 +31,10 @@
 	max_integrity = INTEGRITY_STRONG
 	prevent_crits = list(BCLASS_CUT, BCLASS_CHOP, BCLASS_STAB, BCLASS_BLUNT, BCLASS_TWIST)
 	blocksound = SOFTHIT
-	sewrepair = TRUE
 	smeltresult = /obj/item/fertilizer/ash
 	melting_material = null
+	sewrepair = /datum/attribute/skill/misc/sewing/mending
+	dyeable = TRUE
 
 /obj/item/clothing/wrists/bracers/iron
 	name = "iron plate vambraces"
@@ -86,7 +87,10 @@
 	break_sound = 'sound/foley/cloth_rip.ogg'
 	drop_sound = 'sound/foley/dropsound/cloth_drop.ogg'
 	anvilrepair = null
-	sewrepair = TRUE
+	sewrepair = /datum/attribute/skill/craft/tanning/patching
+	salvage_result = /obj/item/natural/hide/cured
+	salvage_amount = 1
+	dyeable = TRUE
 	salvage_result = null
 	max_integrity = INTEGRITY_STANDARD
 

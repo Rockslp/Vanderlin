@@ -9,7 +9,8 @@
 	pickup_sound = 'sound/foley/equip/cloak_take_off.ogg'
 	break_sound = 'sound/foley/cloth_rip.ogg'
 	drop_sound = 'sound/foley/dropsound/cloth_drop.ogg'
-	sewrepair = TRUE
+	sewrepair = /datum/attribute/skill/craft/tanning/patching
+	dyeable = TRUE
 	smeltresult = /obj/item/fertilizer/ash
 	sellprice = VALUE_LEATHER_ARMOR
 
@@ -88,6 +89,8 @@
 	color = CLOTHING_BARK_BROWN
 	blade_dulling = DULLING_BASHCHOP
 	blocksound = SOFTHIT
+	sewrepair = /datum/attribute/skill/craft/tanning/patching
+	dyeable = TRUE
 	sleevetype = null
 	sleeved = null
 
@@ -270,6 +273,11 @@
 	mob_overlay_icon = 'icons/roguetown/clothing/onmob/courtphys.dmi'
 	detail_tag = "_detail"
 
+/obj/item/clothing/armor/leather/jacket/courtphysician/drifter
+	uses_lord_coloring = FALSE
+	detail_color = CLOTHING_SCARLET
+	misc_flags = CRAFTING_TEST_EXCLUDE
+
 /obj/item/clothing/armor/leather/jacket/leathercoat
 	name = "leather coat"
 	desc = "A tan and purple leather coat."
@@ -342,6 +350,21 @@
 	for its wearer, shielding from blows and weather alike. Utility pouches have been sewn into the front of it."
 	icon_state = "roguearmor_belt"
 	item_state = "roguearmor_belt"
+	armor = ARMOR_LEATHER_GOOD
+	prevent_crits = list(BCLASS_CUT, BCLASS_STAB, BCLASS_BLUNT, BCLASS_CHOP, BCLASS_SMASH)
+	max_integrity = ARMOR_INT_CHEST_LIGHT_MASTER
+	sellprice = 20
+
+// gronnic subtype
+/obj/item/clothing/armor/leather/gronn
+	name = "osslandic ravager mantle"
+	desc = "A carefully created mantle of bone and hardened leather. It offers superior protection against the threats of the wild while remaining light, \
+			A popular design in Ossland is to adorn a shoulder with a wolf pelt, a symbol of the Great Hunt."
+	icon = 'icons/roguetown/clothing/special/gronn.dmi'
+	mob_overlay_icon = 'icons/roguetown/clothing/special/onmob/gronn.dmi'
+	icon_state = "gronnleatherarmor"
+	item_state = "gronnleatherarmor"
+	armor = ARMOR_GRONN_LIGHT
 	pocket_storage_component_path = /datum/component/storage/concrete/grid/cloak
 
 /obj/item/clothing/armor/leather/jerkin/belted/long

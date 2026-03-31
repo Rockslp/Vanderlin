@@ -2,7 +2,7 @@
 	name = "Medium armor template"
 	equip_delay_self = 4 SECONDS
 	unequip_delay_self = 3 SECONDS
-	anvilrepair = /datum/attribute/skill/craft/armorsmithing
+	anvilrepair = /datum/attribute/skill/craft/armor_repair
 	melt_amount = 75
 	melting_material = /datum/material/steel
 	armor_class = AC_MEDIUM
