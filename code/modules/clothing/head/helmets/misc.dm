@@ -394,7 +394,6 @@
 	icon_state = "hounskull"
 	emote_environment = 3
 
-	armor = ARMOR_PLATE_GOOD
 	item_weight = 7 * STEEL_MULTIPLIER
 
 //............... Knights Helmet ............... //
@@ -495,9 +494,9 @@
 	body_parts_covered = COVERAGE_HEAD_NOSE
 	flags_inv = HIDEEARS|HIDEHAIR
 	block2add = FOV_BEHIND
-	max_integrity = INTEGRITY_STRONG//slighly more integrity
+	max_integrity = INTEGRITY_STRONG + 100
 	slot_flags = ITEM_SLOT_HEAD | ITEM_SLOT_HIP
-	smeltresult = /obj/item/ingot/iron
+	smeltresult = /obj/item/ingot/steel
 	sellprice = VALUE_IRON_ARMOR_UNUSUAL
 	item_weight = 6 * STEEL_MULTIPLIER
 	detail_tag = "_detail"
@@ -581,18 +580,18 @@
 /obj/item/clothing/head/helmet/blacksteel/bucket
 	name = "Blacksteel Great Helm"
 	desc = "A bucket helmet forged of durable blacksteel. None shall pass.."
-	body_parts_covered = FULL_HEAD
 	icon = 'icons/roguetown/clothing/special/blkknight.dmi'
 	mob_overlay_icon = 'icons/roguetown/clothing/special/onmob/blkknight.dmi'
 	icon_state = "bkhelm"
 	item_state = "bkhelm"
+	body_parts_covered = FULL_HEAD
+	armor_class = AC_HEAVY
 	flags_inv = HIDEEARS|HIDEFACE
 	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
-	armor = list("blunt" = 90, "slash" = 100, "stab" = 80,  "piercing" = 100, "fire" = 0, "acid" = 0)
-	prevent_crits = list(BCLASS_CUT, BCLASS_STAB, BCLASS_CHOP, BCLASS_BLUNT, BCLASS_SMASH, BCLASS_TWIST, BCLASS_PICK)
+	armor = ARMOR_PLATE_GOOD
+	prevent_crits = ALL_CRITICAL_HITS
 	block2add = FOV_RIGHT|FOV_LEFT
-	max_integrity = 425
-	anvilrepair = /datum/attribute/skill/craft/blacksmithing
+	max_integrity = INTEGRITY_STRONGEST + 100
 	smeltresult = /obj/item/ingot/blacksteel
 	item_weight = 6 * BLACKSTEEL_MULTIPLIER
 
@@ -602,10 +601,10 @@
 	body_parts_covered = HAIR | HEAD
 	icon_state = "psybarbs"
 	item_state = "psybarbs"
-	prevent_crits = list(BCLASS_CUT, BCLASS_STAB, BCLASS_CHOP, BCLASS_BLUNT, BCLASS_SMASH, BCLASS_TWIST, BCLASS_PICK)
+	armor_class = AC_LIGHT
+	prevent_crits = ALL_CRITICAL_HITS
+	max_integrity = INTEGRITY_STRONGEST
 	blocksound = PLATEHIT
-	resistance_flags = FIRE_PROOF
-	anvilrepair = /datum/attribute/skill/craft/armor_repair
 	sewrepair = null
 	icon = 'icons/roguetown/clothing/wrists.dmi'
 	mob_overlay_icon = 'icons/roguetown/clothing/onmob/head.dmi'

@@ -31,7 +31,7 @@
 	break_sound = 'sound/foley/breaksound.ogg'
 	drop_sound = 'sound/foley/dropsound/armor_drop.ogg'
 	armor = ARMOR_PLATE_BAD
-	prevent_crits = list(BCLASS_LASHING, BCLASS_BITE, BCLASS_TWIST, BCLASS_CUT, BCLASS_CHOP, BCLASS_BLUNT, BCLASS_STAB)
+	prevent_crits = ALL_EXCEPT_BLUNT
 	flags_inv = HIDEFACE
 	body_parts_covered = FACE
 	block2add = FOV_BEHIND

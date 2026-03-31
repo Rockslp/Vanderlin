@@ -83,6 +83,7 @@
 	mob_overlay_icon = 'icons/roguetown/clothing/special/onmob/blkknight.dmi'
 	sleeved = 'icons/roguetown/clothing/special/onmob/blkknight.dmi'
 	armor = ARMOR_PLATE_GOOD
+	max_integrity = INTEGRITY_STRONGEST + 100
 	smeltresult = /obj/item/ingot/blacksteel
 	melting_material = /datum/material/blacksteel
 	item_weight = 7 * BLACKSTEEL_MULTIPLIER
@@ -108,9 +109,9 @@
 /obj/item/clothing/shoes/boots/leather/advanced
 	name = "hardened leather boots"
 	desc = "Sturdy, durable, flexible. A marvel of the dark ages that exists solely to protect your toes."
-	max_integrity = INTEGRITY_STANDARD + 50
-	prevent_crits = list(BCLASS_CUT, BCLASS_BLUNT, BCLASS_TWIST)
-	armor = ARMOR_LEATHER //Fix
+	max_integrity = INTEGRITY_STRONG
+	prevent_crits = ALL_EXCEPT_CHOP_AND_STAB
+	armor = ARMOR_LEATHER_GOOD
 
 /obj/item/clothing/shoes/boots/leather/advanced/watch
 	name = "watch boots"
@@ -126,9 +127,9 @@
 /obj/item/clothing/shoes/boots/leather/masterwork
 	name = "masterwork leather boots"
 	desc = "These boots are a craftsmanship marvel. Made with the finest leather. Strong, nimble, reliable."
-	max_integrity = INTEGRITY_STANDARD + 100
-	prevent_crits = list(BCLASS_CUT, BCLASS_BLUNT, BCLASS_TWIST, BCLASS_CHOP) //we're adding chop here!
-	armor = list("blunt" = 80, "slash" = 60, "stab" = 40, "piercing" = 0,"fire" = 0, "acid" = 0) //Fix
+	max_integrity = INTEGRITY_STRONG + 100
+	prevent_crits = ALL_EXCEPT_STAB
+	armor = ARMOR_LEATHER_APEX
 
 /obj/item/clothing/shoes/boots/leather/masterwork/Initialize()
 	. = ..()
@@ -137,12 +138,11 @@
 /obj/item/clothing/shoes/boots/furlinedboots //Fix
 	name = "fur lined boots"
 	desc = "Leather boots lined with fur."
-	gender = PLURAL
 	icon_state = "furlinedboots"
 	item_state = "furlinedboots"
 	sewrepair = /datum/attribute/skill/craft/tanning/patching
 	dyeable = TRUE
-	armor = list("blunt" = 30, "slash" = 10, "stab" = 20,  "piercing" = 0, "fire" = 0, "acid" = 0)
+	armor = ARMOR_LEATHER_WEAK
 	salvage_result = /obj/item/natural/fur
 	item_weight = 3
 	min_cold_protection_temperature = -20
@@ -151,12 +151,11 @@
 /obj/item/clothing/shoes/boots/furlinedanklets
 	name = "fur lined anklets"
 	desc = "Leather anklets lined with fur, foot remains bare."
-	gender = PLURAL
 	icon_state = "furlinedanklets"
 	item_state = "furlinedanklets"
 	sewrepair = /datum/attribute/skill/craft/tanning/patching
 	dyeable = TRUE
-	armor = list("blunt" = 30, "slash" = 10, "stab" = 20,  "piercing" = 0, "fire" = 0, "acid" = 0)
+	armor = ARMOR_LEATHER_WEAK
 	is_barefoot = TRUE
 	salvage_result = /obj/item/natural/fur
 	min_cold_protection_temperature = -20
@@ -164,7 +163,6 @@
 /obj/item/clothing/shoes/boots/clothlinedanklets
 	name = "cloth lined anklets"
 	desc = "Cloth anklets lined with fibers, foot remains bare."
-	gender = PLURAL
 	icon_state = "clothlinedanklets"
 	item_state = "furlinedanklets"
 	is_barefoot = TRUE
@@ -172,7 +170,6 @@
 	armor = ARMOR_MINIMAL
 	dyeable = TRUE
 	salvage_result = /obj/item/natural/cloth
-	salvage_amount = 1
 	item_weight = 2
 
 /obj/item/clothing/shoes/boots/armor/silver

@@ -54,6 +54,7 @@
 	sellprice = VALUE_HEAVY_GAMBESSON
 
 	armor = ARMOR_PADDED_GOOD
+	max_integrity = INTEGRITY_STRONG
 
 /obj/item/clothing/armor/gambeson/heavy/colored
 	misc_flags = CRAFTING_TEST_EXCLUDE
@@ -65,7 +66,6 @@
 	name = "robed jupon"
 	desc = "A thick, quilted jupon with an iron heart protector. It's great for the southern desert's heat and northern tundra's cold."
 	icon_state = "lakkarijupon"
-	max_integrity = INTEGRITY_STRONG
 	r_sleeve_status = SLEEVE_NORMAL
 	l_sleeve_status = SLEEVE_NORMAL
 
@@ -137,7 +137,8 @@
 	icon_state = "arming"
 	sellprice = VALUE_GAMBESSON+BONUS_VALUE_MODEST
 
-	body_parts_covered =  COVERAGE_ALL_BUT_LEGS
+	body_parts_covered = COVERAGE_ALL_BUT_LEGS
+	max_integrity = INTEGRITY_STRONG
 
 //................ Stalker Robe ............... //
 /obj/item/clothing/armor/gambeson/shadowrobe
@@ -168,6 +169,6 @@
 	desc = "The finest leather tunic. Made to ENDURE, Made to Inquire, come heretic or hellfire."
 	icon_state = "leathertunic"
 	color = null
-	prevent_crits = list(BCLASS_CUT, BCLASS_BLUNT, BCLASS_CHOP)
+	prevent_crits = ALL_EXCEPT_STAB
 	armor = ARMOR_PADDED
 	body_parts_covered = COVERAGE_ALL_BUT_LEGS

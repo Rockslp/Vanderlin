@@ -13,7 +13,6 @@
 	item_state = "atgervi_shaman_coat"
 	armor = ARMOR_LEATHER_GOOD
 	prevent_crits = ALL_EXCEPT_STAB
-	max_integrity = INTEGRITY_STANDARD
 
 /obj/item/clothing/pants/trou/leather/atgervi
 	name = "fur pants"
@@ -110,7 +109,7 @@
 	smeltresult = null
 	sewrepair = TRUE
 	blocksound = SOFTHIT
-	max_integrity = ARMOR_INT_HELMET_HARDLEATHER
+	max_integrity = INTEGRITY_STANDARD
 	salvage_result = /obj/item/natural/hide/cured
 	var/on = FALSE
 	var/lux_consumed = FALSE

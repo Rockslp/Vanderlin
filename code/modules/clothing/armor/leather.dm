@@ -285,7 +285,6 @@
 	icon = 'icons/roguetown/clothing/leathercoat.dmi'
 	mob_overlay_icon = 'icons/roguetown/clothing/onmob/leathercoat.dmi'
 	sleeved = 'icons/roguetown/clothing/onmob/leathercoat.dmi'
-	boobed = TRUE
 	armor = ARMOR_LEATHER
 	body_parts_covered = COVERAGE_ALL_BUT_LEGS
 
@@ -299,7 +298,7 @@
 	body_parts_covered = COVERAGE_FULL
 	sleeved = 'icons/roguetown/clothing/onmob/helpers/sleeves_armor.dmi'
 	prevent_crits = list(BCLASS_CUT, BCLASS_STAB, BCLASS_BLUNT, BCLASS_CHOP, BCLASS_SMASH)
-	max_integrity = 250
+	max_integrity = INTEGRITY_STANDARD + 50
 
 /obj/item/clothing/armor/leather/jacket/leathercoat/black
 	name = "black leather coat"
@@ -351,8 +350,6 @@
 	icon_state = "roguearmor_belt"
 	item_state = "roguearmor_belt"
 	armor = ARMOR_LEATHER_GOOD
-	prevent_crits = list(BCLASS_CUT, BCLASS_STAB, BCLASS_BLUNT, BCLASS_CHOP, BCLASS_SMASH)
-	max_integrity = ARMOR_INT_CHEST_LIGHT_MASTER
 	sellprice = 20
 
 // gronnic subtype
@@ -364,7 +361,7 @@
 	mob_overlay_icon = 'icons/roguetown/clothing/special/onmob/gronn.dmi'
 	icon_state = "gronnleatherarmor"
 	item_state = "gronnleatherarmor"
-	armor = ARMOR_GRONN_LIGHT
+	armor = ARMOR_LEATHER_GOOD
 	pocket_storage_component_path = /datum/component/storage/concrete/grid/cloak
 
 /obj/item/clothing/armor/leather/jerkin/belted/long
