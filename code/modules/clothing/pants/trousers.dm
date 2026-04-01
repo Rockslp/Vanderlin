@@ -178,7 +178,7 @@
 			Those of Ossland adopt a design that offers superior protection against the blunted hits and slashing claws of beasts."
 	icon_state = "gronnleatherpants"
 	item_state = "gronnleatherpants"
-	armor = ARMOR_GRONN_LIGHT
-	max_integrity = ARMOR_INT_LEG_HARDLEATHER
+	armor = ARMOR_LEATHER_GOOD
+	max_integrity = INTEGRITY_STRONG
 	icon = 'icons/roguetown/clothing/special/gronn.dmi'
 	mob_overlay_icon = 'icons/roguetown/clothing/special/onmob/gronn.dmi'

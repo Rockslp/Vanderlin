@@ -100,8 +100,8 @@
 	desc = "Copper forearm guards that offer some protection while looking rather stylish."
 	icon_state = "copperarm"
 	item_state = "copperarm"
-	armor = list("blunt" = 50, "slash" = 50, "stab" = 50,  "piercing" = 60, "fire" = 0, "acid" = 0)
-	prevent_crits = list(BCLASS_LASHING, BCLASS_BITE, BCLASS_CUT, BCLASS_CHOP, BCLASS_BLUNT, BCLASS_TWIST)
+	armor = ARMOR_MAILLE_GOOD
+	prevent_crits = ALL_EXCEPT_BLUNT
 	smeltresult = /obj/item/ingot/copper
 	melting_material = /datum/material/copper
 

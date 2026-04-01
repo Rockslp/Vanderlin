@@ -58,8 +58,6 @@
 	attacked_sound = 'sound/combat/hits/onglass/glasshit.ogg'
 	max_integrity = 300
 	integrity_failure = 0.5
-	resistance_flags = FIRE_PROOF
-	body_parts_covered = EYES
 	slot_flags = ITEM_SLOT_MASK|ITEM_SLOT_HEAD
 	anvilrepair = /datum/attribute/skill/craft/armor_repair
 	var/lensmoved = TRUE // starts with the lenses out of the way, night vision being off.
@@ -120,8 +118,6 @@
 	block2add = FOV_BEHIND
 	slot_flags = ITEM_SLOT_MASK|ITEM_SLOT_HIP
 	armor = ARMOR_PADDED
-	sewrepair = /datum/attribute/skill/misc/sewing/mending
-	dyeable = TRUE
 
 /obj/item/clothing/face/sack/psy
 	name = "psydonian sack mask"
@@ -143,14 +139,11 @@
 	body_parts_covered = FACE|HEAD
 	slot_flags = ITEM_SLOT_MASK|ITEM_SLOT_HIP
 	armor = ARMOR_PADDED
-	sewrepair = /datum/attribute/skill/misc/sewing/mending
-	dyeable = TRUE
 
 /obj/item/clothing/face/facemask/steel/confessor
 	name = "strange mask"
 	desc = "It is said that the original version of this mask was used for obscure rituals in Grenzelhoft, and now it has been repurposed as a veil for the cunning hand of the Ordo Venatari. Others say it is a piece of heresy, a necessary evil, capable of keeping its user safe from vile magicks. You can taste copper whenever you draw breath."
 	icon_state = "confessormask"
-	max_integrity = 200
 	equip_sound = 'sound/items/confessormaskon.ogg'
 	melting_material = /datum/material/steel
 	melt_amount = 75

@@ -191,5 +191,5 @@
 	item_state = "gronnplate"
 	boobed = FALSE
 	body_parts_covered = COVERAGE_ALL_BUT_LEGS
-	max_integrity = ARMOR_INT_CHEST_PLATE_STEEL
+	max_integrity = INTEGRITY_STRONG
 	smeltresult = /obj/item/ingot/iron
